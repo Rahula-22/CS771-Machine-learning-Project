@@ -5,13 +5,13 @@ Implementation of Multi-level PUF (ML-PUF) security analysis and delay recovery 
 
 This project addresses two key challenges in hardware security:
 
-1. Multi-level PUF (ML-PUF) Security Analysis – ML-PUF is a variant of arbiter PUF designed to resist machine learning attacks. The task is to prove that linear models can still accurately predict ML-PUF responses despite the added complexity of cross connections and XOR operations.
+1. Multi-level PUF (ML-PUF) Security Analysis – ML PUF is a variant of arbiter PUF designed to resist machine learning attacks. The task is to prove that linear models can still accurately predict ML-PUF responses despite the added complexity of cross connections and XOR operations.
 
 2. Delay Recovery in Arbiter PUFs – Given a linear model representation of an Arbiter PUF, recover a valid set of non-negative delays (𝑝𝑖, 𝑞𝑖, 𝑟𝑖, 𝑠𝑖) that generate the same model, despite underdetermined constraints.
 
 # Objective 
-- Analyze and model ML-PUF challenge-response behavior using linear learning techniques.
-- Demonstrate that ML-PUF responses are still predictable despite added complexity.
+- Analyze and model ML PUF challenge-response behavior using linear learning techniques.
+- Demonstrate that ML PUF responses are still predictable despite added complexity.
 - Implement algorithms to recover feasible delay parameters from given linear models for 64-bit Arbiter PUFs.
 
 # Datasets
@@ -74,17 +74,5 @@ This architecture was designed with the hypothesis that cross-connections and XO
 This project demonstrates that:
 1. Despite the added complexity of ML-PUFs, they remain vulnerable to machine learning attacks using appropriate feature engineering and linear models
 2. It is possible to recover valid delay parameters from a given linear model of an Arbiter PUF, though these parameters are not unique
-
-# Running the Code
-
-```
-# For ML-PUF modeling
-python ml_puf_model.py --train train_data.txt --test test_data.txt
-
-# For Delay Recovery
-python delay_recovery.py --model model_file.txt --output delays.txt
-```
-
-# Acknowledgments
 
 This project was completed as part of the CS771 Machine Learning course.
